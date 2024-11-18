@@ -9,7 +9,7 @@ const initialItems = [
 /* ✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵⊞ Font ⊞✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵ */
 /* ▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓ */
 
-@import url("https://fonts.googleapis.com/css2?family=Monoton&family=Quicksand:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
 /* ▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓ */
 /* ✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵⊞ Initial Styles ⊞✵✵✵✵✵✵✵✵✵✵✵✵✵✵ */
@@ -27,7 +27,9 @@ html {
 
 body {
   font-size: 2.4rem;
-  font-family: sans-serif;
+  font-family: "Merriweather", "Noto Serif", "Playfair Display", "Work Sans",
+    Arial, sans-serif;
+  font-optical-sizing: auto;
   color: #5a3e2b;
   font-family: "Quicksand";
   font-weight: 500;
