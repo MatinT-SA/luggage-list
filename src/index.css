@@ -27,11 +27,10 @@ html {
 
 body {
   font-size: 2.4rem;
-  font-family: "Merriweather", "Noto Serif", "Playfair Display", "Work Sans",
-    Arial, sans-serif;
+  font-family: "Exo 2", "Merriweather", "Noto Serif", "Playfair Display",
+    "Work Sans", Arial, sans-serif;
   font-optical-sizing: auto;
   color: #5a3e2b;
-  font-family: "Quicksand";
   font-weight: 500;
 }
 
@@ -49,10 +48,11 @@ body {
 h1 {
   text-align: center;
   background-color: #f4a226;
-  font-family: "Monoton";
+  font-family: "Playfair Display";
   font-size: 8rem;
   text-transform: uppercase;
-  font-weight: 400;
+  font-weight: 800;
+  font-style: italic;
   word-spacing: 30px;
   letter-spacing: -5px;
   padding: 2.4rem 0;
