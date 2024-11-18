@@ -1,3 +1,6 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLuggageCart } from "@fortawesome/free-solid-svg-icons";
+
 export default function App() {
   return (
     <div className="app">
@@ -10,7 +13,12 @@ export default function App() {
 }
 
 function Logo() {
-  return <h1>Luggage List </h1>;
+  return (
+    <h1>
+      Luggage List{" "}
+      <FontAwesomeIcon icon={faLuggageCart} className="icon-luggage" />
+    </h1>
+  );
 }
 
 function Form() {
