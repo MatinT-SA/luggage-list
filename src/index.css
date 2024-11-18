@@ -22,15 +22,13 @@ const initialItems = [
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 60%;
 }
 
 body {
-  font-size: 2.4rem;
+  font-size: 2rem;
   font-family: "Exo 2", "Merriweather", "Noto Serif", "Playfair Display",
     "Work Sans", Arial, sans-serif;
-  font-optical-sizing: auto;
-  color: #5a3e2b;
   font-weight: 500;
 }
 
@@ -47,15 +45,16 @@ body {
 
 h1 {
   text-align: center;
-  background-color: #f4a226;
+  background-color: #1ae988;
   font-family: "Playfair Display";
-  font-size: 8rem;
+  font-size: 7rem;
   text-transform: uppercase;
   font-weight: 800;
   font-style: italic;
-  word-spacing: 30px;
+  word-spacing: 2.8rem;
   letter-spacing: -5px;
-  padding: 2.4rem 0;
+  padding: 2rem 0;
+  color: #522a41;
 }
 
 .icon-luggage {
@@ -68,12 +67,13 @@ h1 {
 /* ▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓ */
 
 .add-form {
-  background-color: #e5771f;
-  padding: 2.8rem 0;
+  background-color: #24bc3d;
+  color: #1a2141;
+  padding: 2.5rem 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.8rem;
+  gap: 1rem;
 }
 
 h3 {
@@ -114,21 +114,14 @@ input {
   width: 100%;
   max-width: 100%;
   opacity: 0.7;
-  transform: dar;
-  color: #ffebb3;
-  padding: 4rem 0;
+  color: white;
+  padding: 3rem 1rem;
 
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  gap: 3.2rem;
+  gap: 3rem;
   align-items: center;
-}
-
-.list__img {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
 }
 
 .actions button,
@@ -178,8 +171,9 @@ input[type="checkbox"] {
 /* ▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓ */
 
 .stats {
-  background-color: #76c7ad;
+  color: rgb(255, 233, 233);
+  background-color: #141616;
   text-align: center;
   font-weight: 700;
-  padding: 3.2rem 0;
+  padding: 3rem 0;
 }

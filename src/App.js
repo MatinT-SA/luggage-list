@@ -30,7 +30,7 @@ function Form() {
 }
 
 function PackageList() {
-  return <div className="list"></div>;
+  return <div className="list">list</div>;
 }
 
 function Stats() {
