@@ -105,7 +105,16 @@ input {
 /* ▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓ */
 
 .list {
-  background-color: #5a3e2b;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)),
+    url("/public/images/bg-beach.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: auto;
+  width: 100%;
+  max-width: 100%;
+  opacity: 0.7;
+  transform: dar;
   color: #ffebb3;
   padding: 4rem 0;
 
@@ -114,6 +123,12 @@ input {
   flex-direction: column;
   gap: 3.2rem;
   align-items: center;
+}
+
+.list__img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
 }
 
 .actions button,
