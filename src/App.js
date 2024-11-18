@@ -1,16 +1,16 @@
 export default function App() {
   return (
-    <>
+    <div className="app">
       <Logo />
       <Form />
       <PackageList />
       <Stats />
-    </>
+    </div>
   );
 }
 
 function Logo() {
-  return <h1>Luggage List</h1>;
+  return <h1>Luggage List </h1>;
 }
 
 function Form() {
@@ -27,7 +27,7 @@ function PackageList() {
 
 function Stats() {
   return (
-    <footer>
+    <footer className="stats">
       <em>
         You have Y items in your list.you have already packed Y (Y%) items.
       </em>
