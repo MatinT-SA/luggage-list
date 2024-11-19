@@ -5,8 +5,8 @@ import { faClose } from "@fortawesome/free-solid-svg-icons";
 const sampleItems = [
   { id: 1, description: "Keys", quantity: 3, packed: false },
   { id: 2, description: "Wallets", quantity: 1, packed: true },
-  { id: 2, description: "Suitcases", quantity: 4, packed: false },
-  { id: 2, description: "umberallas", quantity: 1, packed: false },
+  { id: 3, description: "Suitcases", quantity: 4, packed: false },
+  { id: 4, description: "umberallas", quantity: 1, packed: false },
 ];
 
 export default function App() {
@@ -30,10 +30,24 @@ function Logo() {
 }
 
 function Form() {
+  function handleSubmit(e) {
+    e.preventDefault();
+    console.log(e);
+  }
+
   return (
-    <div className="add-form">
+    <form className="add-form" onSubmit={handleSubmit}>
       <h3>List all the things you need for your trip</h3>
-    </div>
+      <select>
+        {Array.from({ length: 20 }, (_, i) => i + 1).map((num) => (
+          <option value={num} key={num}>
+            {num}
+          </option>
+        ))}
+      </select>
+      <input type="text" placeholder="Item" />
+      <button>Add</button>
+    </form>
   );
 }
 
@@ -42,7 +56,7 @@ function PackageList() {
     <div className="list">
       <ul>
         {sampleItems.map((item) => (
-          <Item item={item} />
+          <Item item={item} key={item.id} />
         ))}
       </ul>
     </div>
@@ -66,7 +80,7 @@ function Stats() {
   return (
     <footer className="stats">
       <em>
-        You have Y items in your list.you have already packed Y (Y%) items.
+        You have Y items in your list. You have already packed Y (Y%) items.
       </em>
     </footer>
   );
