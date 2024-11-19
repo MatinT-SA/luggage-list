@@ -1,5 +1,13 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLuggageCart } from "@fortawesome/free-solid-svg-icons";
+import { faClose } from "@fortawesome/free-solid-svg-icons";
+
+const sampleItems = [
+  { id: 1, description: "Keys", quantity: 3, packed: false },
+  { id: 2, description: "Wallets", quantity: 1, packed: true },
+  { id: 2, description: "Suitcases", quantity: 4, packed: false },
+  { id: 2, description: "umberallas", quantity: 1, packed: false },
+];
 
 export default function App() {
   return (
@@ -30,7 +38,28 @@ function Form() {
 }
 
 function PackageList() {
-  return <div className="list">list</div>;
+  return (
+    <div className="list">
+      <ul>
+        {sampleItems.map((item) => (
+          <Item item={item} />
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+function Item({ item }) {
+  return (
+    <li>
+      <span style={item.packed ? { textDecoration: "line-through" } : {}}>
+        {item.quantity} {item.description}
+      </span>
+      <button>
+        <FontAwesomeIcon icon={faClose} className="icon-close" />
+      </button>
+    </li>
+  );
 }
 
 function Stats() {
