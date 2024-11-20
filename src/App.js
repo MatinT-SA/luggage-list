@@ -1,7 +1,7 @@
+import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLuggageCart } from "@fortawesome/free-solid-svg-icons";
 import { faClose } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
 
 const sampleItems = [
   { id: 1, description: "Keys", quantity: 3, packed: false },
@@ -11,11 +11,17 @@ const sampleItems = [
 ];
 
 export default function App() {
+  const [items, setItems] = useState([]);
+
+  function handleAddItems(item) {
+    setItems((items) => [...items, item]);
+  }
+
   return (
     <div className="app">
       <Logo />
-      <Form />
-      <PackageList />
+      <Form onAddItem={handleAddItems} />
+      <PackageList items={items} />
       <Stats />
     </div>
   );
@@ -30,7 +36,7 @@ function Logo() {
   );
 }
 
-function Form() {
+function Form({ onAddItem }) {
   const [description, setDescription] = useState("");
   const [quantity, setQuantity] = useState(1);
 
@@ -40,7 +46,8 @@ function Form() {
     if (!description) return;
 
     const newItem = { description, quantity, packed: false, id: Date.now() };
-    console.log(newItem);
+
+    onAddItem(newItem);
 
     setDescription("");
     setQuantity(1);
@@ -70,11 +77,11 @@ function Form() {
   );
 }
 
-function PackageList() {
+function PackageList({ items }) {
   return (
     <div className="list">
       <ul>
-        {sampleItems.map((item) => (
+        {items.map((item) => (
           <Item item={item} key={item.id} />
         ))}
       </ul>
