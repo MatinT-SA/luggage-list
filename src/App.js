@@ -3,13 +3,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLuggageCart } from "@fortawesome/free-solid-svg-icons";
 import { faClose } from "@fortawesome/free-solid-svg-icons";
 
-const sampleItems = [
-  { id: 1, description: "Keys", quantity: 3, packed: false },
-  { id: 2, description: "Wallets", quantity: 1, packed: true },
-  { id: 3, description: "Suitcases", quantity: 4, packed: false },
-  { id: 4, description: "umberallas", quantity: 1, packed: false },
-];
-
 export default function App() {
   const [items, setItems] = useState([]);
 
@@ -17,11 +10,15 @@ export default function App() {
     setItems((items) => [...items, item]);
   }
 
+  function handleDeleteItem(id) {
+    setItems((items) => items.filter((item) => item.id !== id));
+  }
+
   return (
     <div className="app">
       <Logo />
       <Form onAddItem={handleAddItems} />
-      <PackageList items={items} />
+      <PackageList items={items} onDeleteItem={handleDeleteItem} />
       <Stats />
     </div>
   );
@@ -77,26 +74,30 @@ function Form({ onAddItem }) {
   );
 }
 
-function PackageList({ items }) {
+function PackageList({ items, onDeleteItem }) {
   return (
     <div className="list">
       <ul>
         {items.map((item) => (
-          <Item item={item} key={item.id} />
+          <Item item={item} key={item.id} onDeleteItem={onDeleteItem} />
         ))}
       </ul>
     </div>
   );
 }
 
-function Item({ item }) {
+function Item({ item, onDeleteItem }) {
   return (
     <li>
       <span style={item.packed ? { textDecoration: "line-through" } : {}}>
         {item.quantity} {item.description}
       </span>
       <button>
-        <FontAwesomeIcon icon={faClose} className="icon-close" />
+        <FontAwesomeIcon
+          icon={faClose}
+          className="icon-close"
+          onClick={() => onDeleteItem(item.id)}
+        />
       </button>
     </li>
   );
