@@ -18,8 +18,10 @@ export default function Stats({ items }) {
       <em>
         {percentage === 100
           ? "Packing perfection! Now go make some memories. 📸✈️"
-          : `You have ${numItems} items in your list. You have already packed{" "}
-        ${numPacked} (${percentage}%) items.`}
+          : `You have ${
+              numItems === 1 ? "1 item" : `${numItems} items`
+            } in your list. You have already packed
+        ${numPacked} items (${percentage}%)`}
       </em>
     </footer>
   );
