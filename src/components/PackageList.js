@@ -43,7 +43,9 @@ export default function PackageList({
           <option value="packed">Sorted by packed items</option>
         </select>
 
-        <button onClick={onClearItem}>Clear Luggage</button>
+        <button onClick={items.length ? onClearItem : null}>
+          Clear Luggage
+        </button>
       </div>
     </div>
   );
