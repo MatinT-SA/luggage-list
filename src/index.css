@@ -172,10 +172,11 @@ select:focus {
 .actions button,
 .list select {
   text-transform: uppercase;
-  padding: 0.8rem 2.4rem;
-  font-size: 1.4rem;
+  padding: 1rem 2.4rem;
+  font-size: 1.5rem;
   font-weight: 700;
-  margin: 0 0.8rem;
+  margin: 0 1rem;
+  background-color: rgb(255, 255, 141);
 }
 
 .list ul {
@@ -185,7 +186,7 @@ select:focus {
 
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.2rem;
+  gap: 2rem;
   justify-content: center;
   align-content: start;
 }
@@ -270,11 +271,7 @@ input[type="checkbox"] {
   font-size: 16px;
   font-weight: 600;
   color: #fff;
-  background: linear-gradient(
-    45deg,
-    #6a11cb,
-    #2575fc
-  ); /* Cool gradient background */
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
   border: none;
   border-radius: 50px;
   cursor: pointer;
@@ -285,14 +282,10 @@ input[type="checkbox"] {
 }
 
 .modal-actions button:hover {
-  background: linear-gradient(
-    45deg,
-    #ff0080,
-    #ff8000
-  ); /* Vibrant gradient for hover */
-  transform: scale(1.1); /* Slightly enlarge the button */
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Bigger shadow on hover */
-  animation: glow 1s infinite alternate; /* Glowing effect */
+  background: linear-gradient(45deg, #ff0080, #ff8000);
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  animation: glow 1s infinite alternate;
   transition: all 0.3s ease-in-out;
 }
 
@@ -302,8 +295,8 @@ input[type="checkbox"] {
 }
 
 .modal-actions button:active {
-  transform: scale(0.98); /* Slightly shrink when clicked */
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Small shadow when clicked */
+  transform: scale(0.98);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .btn-confirm {
