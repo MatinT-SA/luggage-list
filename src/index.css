@@ -88,9 +88,56 @@ input {
   cursor: pointer;
 }
 
-.add-form button {
+.add-form__button {
   text-transform: uppercase;
-  background-color: #76c7ad;
+  background: linear-gradient(45deg, #ff4e00, #ff7f00);
+  color: #fff;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.add-form__button:hover {
+  background: linear-gradient(45deg, #ff0033, #ff66cc);
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.add-form__button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(255, 127, 0, 0.5);
+}
+
+.add-form__button:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.add-form__button span {
+  position: relative;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.add-form__button:hover span {
+  color: #141f48;
+  transform: translateX(5px);
+}
+
+.add-form__button:hover {
+  animation: pulse 1s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 /* ▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓ */

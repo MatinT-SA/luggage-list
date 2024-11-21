@@ -37,7 +37,9 @@ export default function Form({ onAddItem }) {
         onChange={(e) => setDescription(e.target.value)}
         required
       />
-      <button>Add</button>
+      <button className="add-form__button">
+        <span>Add</span>
+      </button>
     </form>
   );
 }
