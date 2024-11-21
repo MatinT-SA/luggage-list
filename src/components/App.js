@@ -3,9 +3,11 @@ import Form from "./Form";
 import Logo from "./Logo";
 import PackageList from "./PackageList";
 import Stats from "./Stats";
+import ConfirmModal from "./ConfirmModal";
 
 export default function App() {
   const [items, setItems] = useState([]);
+  const [isModalOpen, setisModalOpen] = useState(false);
 
   function handleAddItems(item) {
     setItems((items) => [...items, item]);
@@ -23,12 +25,17 @@ export default function App() {
     );
   }
 
-  function handleClearLuggage() {
-    const confirm = window.confirm(
-      "Are you sure you want to clear all the items?"
-    );
+  function closeClearModal() {
+    setisModalOpen(false);
+  }
 
-    if (confirm) setItems([]);
+  function openClearModal() {
+    setisModalOpen(true);
+  }
+
+  function handleClearLuggage() {
+    setItems([]);
+    setisModalOpen(false);
   }
 
   return (
@@ -39,9 +46,15 @@ export default function App() {
         items={items}
         onDeleteItem={handleDeleteItem}
         onToggleItem={handleToggleItem}
-        onClearItem={handleClearLuggage}
+        onClearItem={openClearModal}
       />
       <Stats items={items} />
+      {isModalOpen && (
+        <ConfirmModal
+          onConfirm={handleClearLuggage}
+          onCancel={closeClearModal}
+        />
+      )}
     </div>
   );
 }
