@@ -36,7 +36,7 @@ body {
 /* ✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵⊞ Logo ⊞✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵ */
 /* ▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓ */
 
-h1 {
+.title {
   text-align: center;
   background-color: #1ae988;
   font-family: "Playfair Display";
@@ -353,12 +353,12 @@ button:disabled {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
-    padding: 2.5rem 1rem;
+    padding: 2rem;
   }
 
   h3 {
     grid-column: 1 / -1;
-    margin-right: 0;
+    margin: 0;
     text-align: center;
   }
 
@@ -366,5 +366,69 @@ button:disabled {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
+  }
+
+  .add-form__row select,
+  .add-form__button {
+    width: auto;
+  }
+
+  .add-form__row input {
+    width: 100%;
+  }
+
+  .list li {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 50%;
+  }
+
+  .title {
+    font-size: 5rem;
+    letter-spacing: -1px;
+    word-spacing: 1rem;
+  }
+
+  .icon-luggage {
+    font-size: 4rem;
+  }
+
+  .stats {
+    font-size: 1.6rem;
+    padding: 3rem 2rem;
+  }
+}
+
+@media (max-width: 390px) {
+  .add-form h3 {
+    font-size: 2rem;
+  }
+
+  .actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 360px) {
+  html {
+    font-size: 45%;
+  }
+
+  .title {
+    font-size: 4rem;
+  }
+
+  .icon-luggage {
+    font-size: 3.5rem;
+  }
+
+  .modal {
+    width: 300px;
   }
 }
