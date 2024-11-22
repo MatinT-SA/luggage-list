@@ -254,6 +254,7 @@ input[type="checkbox"] {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
   width: 320px;
+  line-height: 4rem;
 }
 
 .modal h3 {
@@ -319,5 +320,30 @@ button:disabled {
   }
   100% {
     box-shadow: 0 0 15px #00ffff, 0 0 30px #00ffff, 0 0 40px #00ffff;
+  }
+}
+
+/* ▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓ */
+/* ✵✵✵✵✵✵✵✵✵✵✵✵✵✵⊞ Responsiveness ⊞✵✵✵✵✵✵✵✵✵✵✵✵✵✵ */
+/* ▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓ */
+
+@media (min-width: 1800px) {
+  html {
+    font-size: 80%;
+  }
+
+  .modal {
+    width: 500px;
+  }
+}
+
+@media (max-width: 1000px) {
+  html {
+    font-size: 55%;
+  }
+
+  .add-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 }
