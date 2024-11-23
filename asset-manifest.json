@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/luggage-list/static/css/main.2c85e00d.css",
+    "main.js": "/luggage-list/static/js/main.d90a135f.js",
+    "static/media/bg-beach.jpg": "/luggage-list/static/media/bg-beach.5f7261f67c490b15d6fb.jpg",
+    "index.html": "/luggage-list/index.html",
+    "main.2c85e00d.css.map": "/luggage-list/static/css/main.2c85e00d.css.map",
+    "main.d90a135f.js.map": "/luggage-list/static/js/main.d90a135f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2c85e00d.css",
+    "static/js/main.d90a135f.js"
+  ]
+}
